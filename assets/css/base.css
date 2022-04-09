@@ -1,0 +1,91 @@
+:root {
+  --text-color: #9a9a9a;
+  --heading-color: #555555;
+  --white-color: #ffffff;
+  --blue-color: #14b9d5;
+  --red-color: #f76570;
+  --green-color: #1bbc9b;
+  --yellow-color: #ffd105;
+  --purple-color: #ba71da;
+  --orange-color: #f3a46b;
+
+  --yellow-grad: linear-gradient(to right, #ffd205, #ff9e05);
+  --blue-grad: linear-gradient(to right, #14bad4, #14d4b2);
+  --red-grad:  linear-gradient(to right, #f76670, #f78d66);
+  --green-grad: linear-gradient(to right, #1bbc99, #1bbc65);;
+  --purple-grad: linear-gradient(to right, #bb71d7, #d9717c);
+  --orange-grad: linear-gradient(to right, #f3a56b, #f3c76b);;
+
+  --header-height: 104px;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/* Keyframe */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.yellow-underline,
+.red-underline,
+.blue-underline,
+.green-underline {
+  position: relative;
+  z-index: 1;
+}
+
+.yellow-underline::after,
+.red-underline::after,
+.blue-underline::after,
+.green-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  z-index: -1;
+}
+
+.green-underline::after {
+  background-color: var(--green-color);
+}
+
+.red-underline::after {
+  background-color: var(--red-color);
+}
+
+.blue-underline::after {
+  background-color: var(--blue-color);
+}
+
+.yellow-underline::after {
+  background-color: var(--yellow-color);
+}
